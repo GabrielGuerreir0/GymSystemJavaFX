@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="401.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ListasController">
+    <children>
+        <VBox layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <TabPane prefHeight="403.0" prefWidth="184.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Alunos">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="204.0" prefWidth="0.0">
+                                    <children>
+                                        <HBox prefHeight="39.0" prefWidth="600.0">
+                                            <children>
+                                                <Label prefHeight="39.0" prefWidth="114.0" text="Buscar por Nome:">
+                                                    <padding>
+                                                        <Insets left="10.0" />
+                                                    </padding>
+                                                </Label>
+                                                <TextField fx:id="searchAluno" prefHeight="15.0" prefWidth="406.0">
+                                                    <HBox.margin>
+                                                        <Insets top="5.0" />
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <TableView fx:id="tableAlunos" layoutX="-7.0" layoutY="39.0" prefHeight="299.0" prefWidth="611.0">
+                                            <columns>
+                                                <TableColumn fx:id="colAlunoId" prefWidth="75.0" text="ID" />
+                                                <TableColumn fx:id="colAlunoNome" prefWidth="75.0" text="NOME" />
+                                                <TableColumn fx:id="colAlunoDataInicio" prefWidth="101.0" text="DATA DE INÍCIO" />
+                                                <TableColumn fx:id="colAlunoIdade" prefWidth="87.0" text="IDADE" />
+                                                <TableColumn fx:id="colAlunoPersonal" prefWidth="97.0" text="PERSONAL" />
+                                                <TableColumn fx:id="colAlunoPlano" prefWidth="89.0" text="PLANO" />
+                                            </columns>
+                                        </TableView>
+                                        <HBox layoutY="341.0" prefHeight="37.0" prefWidth="200.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" style="-fx-background-color: #FBCBD0;" text="Excluir Aluno" onAction="#excluirAluno">
+                                                    <HBox.margin>
+                                                        <Insets right="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                                <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#openCadastroAluno" style="-fx-background-color: #90ED8F;" text="Adicionar Aluno" HBox.hgrow="ALWAYS">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                        <Tab text="Personais">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <HBox prefHeight="37.0" prefWidth="600.0">
+                                            <children>
+                                                <Label prefHeight="37.0" prefWidth="107.0" text="Buscar por Nome:">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="searchPersonal" prefHeight="25.0" prefWidth="416.0">
+                                                    <HBox.margin>
+                                                        <Insets top="5.0" />
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <TableView fx:id="tablePersonais" layoutY="37.0" prefHeight="302.0" prefWidth="602.0">
+                                            <columns>
+                                                <TableColumn fx:id="colPersonalId" prefWidth="75.0" text="ID" />
+                                                <TableColumn fx:id="colPersonalNome" prefWidth="130.0" text="NOME" />
+                                                <TableColumn fx:id="colPersonalRegistro" prefWidth="168.0" text="REGISTRO PROFISSIONAL" />
+                                                <TableColumn fx:id="colPersonalEspecialidade" prefWidth="121.0" text="ESPECIALIDADE" />
+                                            </columns>
+                                        </TableView>
+                                        <HBox layoutX="232.0" layoutY="345.0" prefHeight="37.0" prefWidth="243.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="157.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" style="-fx-background-color: #FBCBD0;" text="Excluir Personal" onAction="#excluirPersonal">
+                                                    <HBox.margin>
+                                                        <Insets right="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #90ED8F;" text="Adicionar Personal" onAction="#openCadastroPersonal">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                        <Tab text="Aulas">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <HBox prefHeight="41.0" prefWidth="600.0">
+                                            <children>
+                                                <Label prefHeight="42.0" prefWidth="118.0" text="Buscar por Nome:">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="searchAula" prefHeight="25.0" prefWidth="385.0">
+                                                    <HBox.margin>
+                                                        <Insets top="5.0" />
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <TableView fx:id="tableAulas" layoutY="39.0" prefHeight="278.0" prefWidth="600.0">
+                                            <columns>
+                                                <TableColumn fx:id="colAulaId" prefWidth="75.0" text="ID" />
+                                                <TableColumn fx:id="colAulaNome" prefWidth="128.0" text="NOME" />
+                                                <TableColumn fx:id="colAulaData" prefWidth="119.0" text="DATA" />
+                                                <TableColumn fx:id="colAulaDuracao" prefWidth="133.0" text="DURAÇÃO (min)" />
+                                                <TableColumn fx:id="colAulaPersonal" prefWidth="144.0" text="PERSONAL" />
+                                            </columns>
+                                        </TableView>
+                                        <HBox layoutX="227.0" layoutY="327.0" prefHeight="49.0" prefWidth="192.0" AnchorPane.leftAnchor="227.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" style="-fx-background-color: #FBCBD0;" text="Excluir Aula" onAction="#excluirAula">
+                                                    <HBox.margin>
+                                                        <Insets right="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" prefHeight="11.0" prefWidth="102.0" style="-fx-background-color: #90ED8F;" text="Cadastrar Aula" onAction="#openCadastroAula">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                        <Tab text="Planos">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <HBox layoutX="4.0" prefHeight="42.0" prefWidth="602.0">
+                                            <children>
+                                                <Label prefHeight="31.0" prefWidth="111.0" text="Buscar por Nome:">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="searchPlano" prefHeight="25.0" prefWidth="374.0">
+                                                    <HBox.margin>
+                                                        <Insets top="5.0" />
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                        <TableView fx:id="tablePlanos" layoutX="-5.0" layoutY="42.0" prefHeight="275.0" prefWidth="609.0">
+                                            <columns>
+                                                <TableColumn fx:id="colPlanoId" prefWidth="75.0" text="ID" />
+                                                <TableColumn fx:id="colPlanoTipo" prefWidth="150.0" text="TIPO" />
+                                                <TableColumn fx:id="colPlanoValor" prefWidth="100.0" text="VALOR" />
+                                                <TableColumn fx:id="colPlanoDescricao" prefWidth="250.0" text="DESCRIÇÃO" />
+                                            </columns>
+                                        </TableView>
+                                        <HBox layoutX="166.0" layoutY="323.0" prefHeight="48.0" prefWidth="300.0" AnchorPane.leftAnchor="166.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" style="-fx-background-color: #FBCBD0;" text="Excluir Plano" onAction="#excluirPlano">
+                                                    <HBox.margin>
+                                                        <Insets right="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" style="-fx-background-color: #90ED8F;" text="Adicionar Plano" onAction="#openCadastroPlano">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" right="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" style="-fx-background-color: #FF9831;" text="Editar Plano" onAction="#editarPlano">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+
+                    </tabs>
+                </TabPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
