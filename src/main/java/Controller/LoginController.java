@@ -67,6 +67,7 @@ public class LoginController {
             Stage stage = (Stage) usernameField.getScene().getWindow();
 
             // Define a nova cena (Dashboard) no stage
+            stage.setResizable(false);
             stage.setScene(new Scene(dashboardRoot));
             stage.show();
         } catch (IOException e) {

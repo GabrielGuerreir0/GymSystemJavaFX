@@ -12,12 +12,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="401.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ListasController">
+<AnchorPane prefHeight="404.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ListasController">
     <children>
         <VBox layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
             <children>
-                <TabPane prefHeight="403.0" prefWidth="184.0" tabClosingPolicy="UNAVAILABLE">
+                <TabPane prefHeight="402.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
                         <Tab text="Alunos">
                             <content>
@@ -37,7 +36,7 @@
                                                 </TextField>
                                             </children>
                                         </HBox>
-                                        <TableView fx:id="tableAlunos" layoutX="-7.0" layoutY="39.0" prefHeight="299.0" prefWidth="611.0">
+                                        <TableView fx:id="tableAlunos" layoutX="-2.0" layoutY="39.0" prefHeight="299.0" prefWidth="606.0">
                                             <columns>
                                                 <TableColumn fx:id="colAlunoId" prefWidth="75.0" text="ID" />
                                                 <TableColumn fx:id="colAlunoNome" prefWidth="75.0" text="NOME" />
@@ -49,7 +48,7 @@
                                         </TableView>
                                         <HBox layoutY="341.0" prefHeight="37.0" prefWidth="200.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
                                             <children>
-                                                <Button mnemonicParsing="false" style="-fx-background-color: #FBCBD0;" text="Excluir Aluno" onAction="#excluirAluno">
+                                                <Button mnemonicParsing="false" onAction="#excluirAluno" style="-fx-background-color: #FBCBD0;" text="Excluir Aluno">
                                                     <HBox.margin>
                                                         <Insets right="5.0" />
                                                     </HBox.margin>
@@ -94,12 +93,12 @@
                                         </TableView>
                                         <HBox layoutX="232.0" layoutY="345.0" prefHeight="37.0" prefWidth="243.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="157.0">
                                             <children>
-                                                <Button mnemonicParsing="false" style="-fx-background-color: #FBCBD0;" text="Excluir Personal" onAction="#excluirPersonal">
+                                                <Button mnemonicParsing="false" onAction="#excluirPersonal" style="-fx-background-color: #FBCBD0;" text="Excluir Personal">
                                                     <HBox.margin>
                                                         <Insets right="5.0" />
                                                     </HBox.margin>
                                                 </Button>
-                                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #90ED8F;" text="Adicionar Personal" onAction="#openCadastroPersonal">
+                                                <Button mnemonicParsing="false" onAction="#openCadastroPersonal" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #90ED8F;" text="Adicionar Personal">
                                                     <HBox.margin>
                                                         <Insets left="5.0" />
                                                     </HBox.margin>
@@ -140,12 +139,12 @@
                                         </TableView>
                                         <HBox layoutX="227.0" layoutY="327.0" prefHeight="49.0" prefWidth="192.0" AnchorPane.leftAnchor="227.0">
                                             <children>
-                                                <Button mnemonicParsing="false" style="-fx-background-color: #FBCBD0;" text="Excluir Aula" onAction="#excluirAula">
+                                                <Button mnemonicParsing="false" onAction="#excluirAula" style="-fx-background-color: #FBCBD0;" text="Excluir Aula">
                                                     <HBox.margin>
                                                         <Insets right="5.0" />
                                                     </HBox.margin>
                                                 </Button>
-                                                <Button mnemonicParsing="false" prefHeight="11.0" prefWidth="102.0" style="-fx-background-color: #90ED8F;" text="Cadastrar Aula" onAction="#openCadastroAula">
+                                                <Button mnemonicParsing="false" onAction="#openCadastroAula" prefHeight="11.0" prefWidth="102.0" style="-fx-background-color: #90ED8F;" text="Cadastrar Aula">
                                                     <HBox.margin>
                                                         <Insets left="5.0" />
                                                     </HBox.margin>
@@ -185,17 +184,17 @@
                                         </TableView>
                                         <HBox layoutX="166.0" layoutY="323.0" prefHeight="48.0" prefWidth="300.0" AnchorPane.leftAnchor="166.0">
                                             <children>
-                                                <Button mnemonicParsing="false" style="-fx-background-color: #FBCBD0;" text="Excluir Plano" onAction="#excluirPlano">
+                                                <Button mnemonicParsing="false" onAction="#excluirPlano" style="-fx-background-color: #FBCBD0;" text="Excluir Plano">
                                                     <HBox.margin>
                                                         <Insets right="5.0" />
                                                     </HBox.margin>
                                                 </Button>
-                                                <Button mnemonicParsing="false" style="-fx-background-color: #90ED8F;" text="Adicionar Plano" onAction="#openCadastroPlano">
+                                                <Button mnemonicParsing="false" onAction="#openCadastroPlano" style="-fx-background-color: #90ED8F;" text="Adicionar Plano">
                                                     <HBox.margin>
                                                         <Insets left="5.0" right="5.0" />
                                                     </HBox.margin>
                                                 </Button>
-                                                <Button mnemonicParsing="false" style="-fx-background-color: #FF9831;" text="Editar Plano" onAction="#editarPlano">
+                                                <Button mnemonicParsing="false" onAction="#editarPlano" style="-fx-background-color: #FF9831;" text="Editar Plano">
                                                     <HBox.margin>
                                                         <Insets left="5.0" />
                                                     </HBox.margin>
